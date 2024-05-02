@@ -1,0 +1,26 @@
+{% extends "base.htm" %}
+
+{% block contenu %}
+    <div class="row mt-4">
+        <div class="col-md-6 m-auto">
+            <div class="card card-body">
+                <form method="POST"> {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="nom" class="form-label">Nom</label>
+                        <input type="text" class="form-control" name="nom" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="nbPersonnes" class="form-label">Nombre de personne</label>
+                        <input type="text" class="form-control" name="nbPersonnes" aria-describedby="emailHelp">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="montant" class="form-label">Montant</label>
+                        <input type="text" class="form-control" name="montant" aria-describedby="emailHelp">
+                    </div>
+                    <button class="btn btn-primary">Enrigistre</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock  %}
